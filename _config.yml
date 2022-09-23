@@ -1,4 +1,5 @@
 domain: velcro-xiv.github.io
 url: https://velcro-xiv.github.io
+baseurl: https://velcro-xiv.github.io/
 markdown: kramdown
 remote_theme: poole/poole
