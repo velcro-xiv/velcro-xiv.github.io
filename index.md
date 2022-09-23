@@ -1,6 +1,34 @@
 # Velcro
 Velcro is a toolkit for reading and processing packets from FFXIV. The toolkit is designed to be modular, with different applications attaching to the inputs and outputs of each other. The primary message format is JSON Lines, with a schema described (here, TBD).
 
+## Installation
+This page documents Velcro's installation process for each key component.
+
+### `xivsniff`
+This is the data producer for the toolkit. Installation is as follows:
+1. Ensure you have the .NET 6.0 runtime installed, along with either WinPcap or npcap. 
+2. Download the `.exe` from the latest release [here](https://github.com/velcro-xiv/xivsniff/releases/latest).
+3. Put the file somewhere accessible and add it to your `PATH` environment variable.
+4. Reload any terminals you have open and try to run `xivsniff`. If it prints an error saying it can't find an active game instance, feel free to ignore it.
+
+You can run `xivsniff` while FFXIV is running, and it will print JSON Lines data to the console.
+This can either be saved to a file, left in the console, or piped to another Velcro application.
+Next, we'll install `velcro`.
+
+### `velcro`
+This is the primary data consumer for the toolkit at this time.
+It also functions as a producer, streaming any data it receives to its own standard output.
+Installation is as follows.
+1. Download the `.exe` from the latest release [here](https://github.com/velcro-xiv/velcro/releases/latest).
+2. Rename it to `velcro.exe` for convenience.
+3. Put the file somewhere accessible and add it to your `PATH` environment variable.
+
+### DBeaver
+Install [DBeaver](https://dbeaver.io/) using its downloadable installer. Its Community Edition is free for personal use.
+
+### ImHex
+Install [ImHex](https://imhex.werwolv.net/) using its downloadable installer.
+
 ## Design tenets
 * Velcro applications do one thing, and they do it well.
 * Data formats are backwards-compatible.
