@@ -7,7 +7,8 @@ Velcro is a toolkit for reading and processing packets from FFXIV. The toolkit i
 * Data format versions are distinguished with a version number.
 * Producers write data lines to standard output.
 * Consumers read data lines from standard input.
-* Unless the application has a TUI, the standard error stream is used for logging.
+* Unless the application relies on a TUI, the standard error stream is used for logging.
+* Data lines and information derived from them should always be considered sensitive information unless proven otherwise.
 
 ## Velcro applications
 [velcro](https://github.com/velcro-xiv/velcro) is the core application component of the toolkit. `velcro` supports both input and output streams, and it archives packet data in a SQLite database. This data can be queried using [DBeaver](https://dbeaver.io/) or another SQLite viewer to perform complex transformation, filtering, and aggregation operations over the collected data. DBeaver can then directly open a binary editor to study packet data in greater detail.
@@ -19,3 +20,9 @@ Velcro is a toolkit for reading and processing packets from FFXIV. The toolkit i
 * [velcro](https://github.com/velcro-xiv/velcro)
 * [DBeaver](https://dbeaver.io/)
 * [ImHex](https://imhex.werwolv.net/)
+
+## Future additions
+* A TUI for high-level data visualization in the console.
+* A Windows installer for Velcro applications.
+* A package manager and registry for Velcro applications.
+* Integration with public opcode definitions.
