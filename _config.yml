@@ -1,4 +1,4 @@
 domain: velcro-xiv.github.io
 url: https://velcro-xiv.github.io
 markdown: kramdown
-theme: cayman
+remote_theme: pages-themes/cayman@v0.2.0
