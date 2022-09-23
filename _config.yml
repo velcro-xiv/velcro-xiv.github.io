@@ -1,3 +1,5 @@
+name: Velcro
+description: Intuitive network reverse-engineering toolkit for FFXIV.
 domain: velcro-xiv.github.io
 url: https://velcro-xiv.github.io
 markdown: kramdown
