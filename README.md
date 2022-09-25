@@ -55,7 +55,7 @@ This will create a file called `velcro.db` and some related files in your workin
 Open this in DBeaver and run SQL queries on the `messages` table to explore the data.
 
 You can perform offset searches on the `data` column by using the SQLite functions `substr(quote(data), 3 + N * 2, M * 2)`, replacing `N` with your desired offset, and `M` with the number of bytes to search for.
-You can also perform offset-invariant searches by using conditions similar to `quote(data) LIKE "%ffff%"`.
+You can also perform offset-invariant searches by using conditions similar to `quote(data) LIKE "%FFFF%"`.
 
 Clicking on a `data` instance will bring up a hexdump of the `BLOB`.
 Using the button labeled "Open in external editor" you can open the object in ImHex to analyze it.
