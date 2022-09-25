@@ -29,6 +29,45 @@ Install [DBeaver](https://dbeaver.io/) using its downloadable installer. Its Com
 ### ImHex (optional)
 Install [ImHex](https://imhex.werwolv.net/) using its downloadable installer.
 
+## Usage
+Launch FFXIV and log in.
+Then, fire up `cmd` or `bash` (or your own `sh` derivative of choice) and create a new folder for your database.
+Navigate to it in your shell and run:
+
+```bash
+xivsniff | velcro
+```
+
+Your terminal should be filled with data lines. If you happen to dislike this, you might want to redirect the end of your pipeline to a null file descriptor:
+
+### `cmd`
+```cmd
+xivsniff | velcro > NUL
+```
+
+
+### `bash` etc.
+```bash
+xivsniff | velcro > /dev/null
+```
+
+This will create a file called `velcro.db` and some related files in your working directory.
+Open this in DBeaver and run SQL queries on the `messages` table to explore the data.
+
+You can perform offset searches on the `data` column by using the SQLite functions `substr(quote(data), 3 + N * 2, M * 2)`, replacing `N` with your desired offset, and `M` with the number of bytes to search for.
+You can also perform offset-invariant searches by using conditions similar to `quote(data) LIKE "%ffff%"`.
+
+Clicking on a `data` instance will bring up a hexdump of the `BLOB`.
+Using the button labeled "Open in external editor" you can open the object in ImHex to analyze it.
+
+With these tools, you can effectively collect and analyze packet data.
+
+## Notes on Powershell
+Powershell has its own conventions distinct from `cmd` and `bash`-based shells. Because of this, pipes into typical programs require special handling. It's best to just avoid Powershell when using `velcro`. However, you can force it to work with something like this:
+```pwsh
+xivsniff | Out-String -stream | velcro > $null
+```
+
 ## Design tenets
 * Velcro applications do one thing, and they do it well.
 * Data formats are backwards-compatible.
