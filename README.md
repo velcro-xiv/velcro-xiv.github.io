@@ -2,7 +2,7 @@
 Velcro is a toolkit for reading and processing packets from FFXIV. The toolkit is designed to be modular, with different applications attaching to the inputs and outputs of each other. The primary message format is JSON Lines, with a schema described (here, TBD).
 
 ## Installation
-This page documents Velcro's installation process for each key component.
+This section documents Velcro's installation process for each key component.
 
 ### `xivsniff`
 This is the data producer for the toolkit. Installation is as follows:
@@ -23,10 +23,10 @@ Installation is as follows.
 2. Rename it to `velcro.exe` for convenience.
 3. Put the file somewhere accessible and add it to your `PATH` environment variable.
 
-### DBeaver
+### DBeaver (optional)
 Install [DBeaver](https://dbeaver.io/) using its downloadable installer. Its Community Edition is free for personal use.
 
-### ImHex
+### ImHex (optional)
 Install [ImHex](https://imhex.werwolv.net/) using its downloadable installer.
 
 ## Design tenets
@@ -46,11 +46,11 @@ Install [ImHex](https://imhex.werwolv.net/) using its downloadable installer.
 ## The toolkit
 * [xivsniff](https://github.com/velcro-xiv/xivsniff)
 * [velcro](https://github.com/velcro-xiv/velcro)
-* [DBeaver](https://dbeaver.io/)
-* [ImHex](https://imhex.werwolv.net/)
+* [DBeaver](https://dbeaver.io/) (optional)
+* [ImHex](https://imhex.werwolv.net/) (optional, also see [010](https://www.sweetscape.com/010editor/))
 
 ## Future additions
 * A TUI for high-level data visualization in the console.
 * A Windows installer for Velcro applications.
 * A package manager and registry for Velcro applications.
-* Integration with public opcode definitions.
+* Integration with public opcode definitions (in-progress, see [velcro-hydrate](https://github.com/velcro-xiv/velcro-hydrate)).
