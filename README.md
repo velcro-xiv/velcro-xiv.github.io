@@ -17,7 +17,7 @@ This section documents Velcro's installation process for each key component.
 
 ### `xivsniff`
 This is the data producer for the toolkit. Installation is as follows:
-1. Ensure you have the .NET 6.0 runtime installed, along with either WinPcap or npcap. 
+1. Ensure you have either WinPcap or npcap installed.
 2. Download the `.exe` from the latest release [here](https://github.com/velcro-xiv/xivsniff/releases/latest).
 3. Put the file somewhere accessible and add it to your `PATH` environment variable.
 4. Reload any terminals you have open and try to run `xivsniff`. If it prints an error saying it can't find an active game instance, feel free to ignore it.
